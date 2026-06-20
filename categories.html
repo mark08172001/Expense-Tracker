@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - Expense Tracker</title>
+    <link rel="stylesheet" href="/public/css/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">💰 Expense Tracker</div>
+            <nav class="nav-menu">
+                <li class="nav-item"><a href="/dashboard.html" class="nav-link"><span>📊</span> Dashboard</a></li>
+                <li class="nav-item"><a href="/transactions.html" class="nav-link"><span>💳</span> Transactions</a></li>
+                <li class="nav-item"><a href="/categories.html" class="nav-link active"><span>🏷️</span> Categories</a></li>
+                <li class="nav-item"><a href="/budgets.html" class="nav-link"><span>💰</span> Budgets</a></li>
+                <li class="nav-item"><a href="/reports.html" class="nav-link"><span>📈</span> Reports</a></li>
+                <li class="nav-item"><a href="/profile.html" class="nav-link"><span>👤</span> Profile</a></li>
+            </nav>
+            <div class="user-section">
+                <div class="user-info">
+                    <div class="user-email" id="userEmail">-</div>
+                    <button class="btn btn-sm btn-outline" id="logoutBtn">Logout</button>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="header">
+                <div class="header-title"><h1>Categories</h1></div>
+                <div class="header-actions">
+                    <button class="btn btn-primary" id="addCategoryBtn">+ New Category</button>
+                    <button class="btn btn-icon" id="darkModeToggle" title="Toggle dark mode">🌙</button>
+                </div>
+            </div>
+
+            <div class="grid grid-3" id="categoriesContainer">
+                <div class="loading" style="grid-column: 1 / -1;"><span class="spinner"></span> Loading categories...</div>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal" id="categoryModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">New Category</h2>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <form id="categoryForm">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="form-label">Category Name</label>
+                        <input type="text" id="categoryName" class="form-input" placeholder="e.g., Food" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Type</label>
+                        <select id="categoryType" class="form-select" required>
+                            <option value="">Select type</option>
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Icon (Emoji)</label>
+                        <input type="text" id="categoryIcon" class="form-input" placeholder="e.g., 🍔" maxlength="2" value="📌">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline" id="modalCancel">Cancel</button>
+                    <button type="submit" class="btn btn-primary" id="submitBtn">Add Category</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="/src/pages/categories.js"></script>
+</body>
+</html>
