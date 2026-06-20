@@ -1,0 +1,44 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Composer
+vendor/
+composer.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+
+# Build/dist
+dist/
+build/
+
+# Node (if using for build tools)
+node_modules/
+npm-debug.log
+
+# PHP
+.php_cs.cache
+.phpunit.result.cache
+
+# Local development
+local.conf

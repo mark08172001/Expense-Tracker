@@ -1,0 +1,11 @@
+{
+  "name": "expense-tracker",
+  "version": "1.0.0",
+  "description": "Personal Expense Tracker Application",
+  "scripts": {
+    "dev": "cd public && php -S localhost:8000"
+  },
+  "keywords": ["expense", "tracker", "finance", "budget"],
+  "author": "",
+  "license": "MIT"
+}
